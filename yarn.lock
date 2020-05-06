@@ -16,6 +16,11 @@
     "@types/minimatch" "*"
     "@types/node" "*"
 
+"@types/googlemaps@^3.39.4":
+  version "3.39.4"
+  resolved "https://registry.yarnpkg.com/@types/googlemaps/-/googlemaps-3.39.4.tgz#c32ec3bb1481e53a7282598f7fa96a75bc834139"
+  integrity sha512-R11RyCccERJhqSXlePFdoOXbWiTsY3H17Wl5e+JEpJFBXl8P+0Rm+JP8eqqSqOCtZjXDlYeKKnhE8a4VZlhtTw==
+
 "@types/minimatch@*":
   version "3.0.3"
   resolved "https://registry.yarnpkg.com/@types/minimatch/-/minimatch-3.0.3.tgz#3dca0e3f33b200fc7d1139c0cd96c1268cadfd9d"
