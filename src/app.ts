@@ -8,7 +8,7 @@ const API_KEY = 'AIzaSyCigPEMEx6R4PJNn_dWAUKE_aJP_xxqhVU'; // cspell: disable-li
 // declare a variable imported from the script tag in html head.
 // declare var google: any;
 
-async function searchAddressHandler(e: Event) {
+async function googleSearchAddressHandler(e: Event) {
   e.preventDefault();
   const enteredAddress = addressInput.value;
 
@@ -44,6 +44,30 @@ async function searchAddressHandler(e: Event) {
     alert(err.message);
     console.log(err);
   }
+}
+
+googleSearchAddressHandler;
+
+declare var ol: any;
+
+function searchAddressHandler(event: Event) {
+  event.preventDefault();
+
+  const coordinates = { lat: 37.524759, lng: 126.93062 }; // Can't fetch coordinates from Google API, use dummy ones
+
+  document.getElementById('map')!.innerHTML = ''; // clear <p> from <div id="map">
+  new ol.Map({
+    target: 'map',
+    layers: [
+      new ol.layer.Tile({
+        source: new ol.source.OSM(),
+      }),
+    ],
+    view: new ol.View({
+      center: ol.proj.fromLonLat([coordinates.lng, coordinates.lat]),
+      zoom: 16,
+    }),
+  });
 }
 
 form.addEventListener('submit', searchAddressHandler);
