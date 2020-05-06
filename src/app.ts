@@ -5,6 +5,7 @@ function searchAddressHandler(e: Event) {
   e.preventDefault();
   const enteredAddress = addressInput.value;
 
+  const API_KEY = 'AIzaSyCigPEMEx6R4PJNn_dWAUKE_aJP_xxqhVU'; // cspell: disable-line
   // send this to Google's API!
 }
 
